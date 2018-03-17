@@ -1,15 +1,15 @@
-function getIndexToIns(arr, num) {
-  arr.sort(function(a, b) {
-    return a - b;
-  });
+function destroyer(arr) {
+  var args = arr.slice.call(arguments);
   
   for (var i = 0; i < arr.length; i++) {
-    if (arr[i] > num) {
-      var index =  arr.indexOf(arr[i]);
+    for (var j = 0; j < args.length; j++) {
+      if (arr[i] === args[j]) {
+        delete arr[i];
+      }
     }
   }
-  
-  return num;
+  return arr.filter(Boolean);
 }
 
-getIndexToIns([40, 60], 50);
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
