@@ -1,7 +1,7 @@
 function reverseString(str) {
   
-    strArray = str.split("");
-    reversedArray = strArray.reverse();
+    var strArray = str.split("");
+    var reversedArray = strArray.reverse();
     str = reversedArray.join("");
     return str;
   }

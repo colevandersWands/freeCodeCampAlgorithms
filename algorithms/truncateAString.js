@@ -8,7 +8,6 @@ function truncateString(str, num) {
     if (num <= 2) {
       truncatedString = str.slice(0, num) + "...";
     } 
-    console.log(truncatedString);
     return truncatedString;
   }
   
