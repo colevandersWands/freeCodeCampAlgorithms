@@ -1,19 +1,13 @@
 function mutation(arr) {
-    var checkWord = arr[0].toLowerCase();
-    var doesContainWord = arr[1].toLowerCase();
-    var checkLetter = [];
-    
-    for(var i = 0; i < doesContainWord.length; i++) {
-      checkLetter.push(checkWord.indexOf(doesContainWord[i]));
-    }
-    
-    for (var j = 0; j < checkLetter.length; j++) {
-      if (checkLetter[j] == -1) {
-        return false;
-      }
-      
-    } 
-      return true;
-  }
+  const targetWord = arr[0].toLowerCase();
+  const testWord = arr[1].toLowerCase();
   
-  mutation(["hello", "hey"]);
+  for (let i = 0; i < testWord.length; i++) {
+    if (targetWord.indexOf(testWord[i]) === -1) {
+      return false;
+    }
+  }
+  return true;
+}
+
+mutation(["hello", "hey"]);

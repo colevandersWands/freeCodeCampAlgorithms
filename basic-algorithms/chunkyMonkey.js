@@ -1,12 +1,11 @@
 function chunkArrayInGroups(arr, size) {
-    var splitArr = [];
+  const splitArr = [];
     
-    for (var i = 0; i < arr.length; i += size) {
-      var splitElements = arr.slice(i, size + i);
-      splitArr.push(splitElements);
-    }
-    
-    return splitArr;
+  for (let i = 0; i < arr.length; i += size) {
+    splitArr.push(arr.slice(i, size + i));
   }
   
-  chunkArrayInGroups(["a", "b", "c", "d"], 2);
+  return splitArr;
+}
+
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
